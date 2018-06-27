@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "735807495911",
+    "firebase_url": "https://team-solo-quiz.firebaseio.com",
+    "project_id": "team-solo-quiz",
+    "storage_bucket": "team-solo-quiz.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:735807495911:android:99ab488ae64b24cd",
+        "android_client_info": {
+          "package_name": "fr.neamar.teamsoloquiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "735807495911-fic926upola346rcalkl9b30lrrhlbib.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtgXPNkKpJ6MtBymKRzw3-t7dpsA40oVE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
