@@ -54,7 +54,7 @@ class QuestionActivity : AppCompatActivity() {
 
             override fun run() {
                 progressBar.progress = remainingTime;
-                remainingTime -= 500
+                remainingTime -= 100
 
                 if (remainingTime <= 0) {
                     moveToAnswers();
