@@ -14,8 +14,17 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:textSize="25dp"
-        android:text="blah blah who gets first blood yay please answer fast" />
+        android:textSize="30dp"
+        android:text="Which team will strike first blood?"
+
+        android:background="#A71E34"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:paddingHorizontal="60dp"
+        />
+
+
 
 
     <android.support.v7.widget.RecyclerView
