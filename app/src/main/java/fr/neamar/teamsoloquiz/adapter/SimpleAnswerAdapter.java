@@ -14,6 +14,7 @@ import fr.neamar.teamsoloquiz.R;
 
 public class SimpleAnswerAdapter extends RecyclerView.Adapter<SimpleAnswerHolder> {
     private ArrayList<String> answers;
+    private int selectedItem = -1;
 
     public SimpleAnswerAdapter(ArrayList<String> answers) throws JSONException {
         this.answers = answers;
@@ -27,12 +28,12 @@ public class SimpleAnswerAdapter extends RecyclerView.Adapter<SimpleAnswerHolder
 
         View view = inflater.inflate(R.layout.item_answer_simple, parent, false);
 
-        return new SimpleAnswerHolder(view);
+        return new SimpleAnswerHolder(view, this);
     }
 
     @Override
     public void onBindViewHolder(SimpleAnswerHolder holder, int position) {
-        holder.bindSimpleAnswer(answers.get(position));
+        holder.bindSimpleAnswer(answers.get(position), position, selectedItem);
     }
 
     @Override
@@ -48,5 +49,14 @@ public class SimpleAnswerAdapter extends RecyclerView.Adapter<SimpleAnswerHolder
     private void updateAnswers(ArrayList<String> answers) {
         this.answers = answers;
         notifyDataSetChanged();
+    }
+
+    public void setSelectedItem(int position) {
+        selectedItem = position;
+        notifyDataSetChanged();
+    }
+
+    public int getSelectedItem() {
+        return selectedItem;
     }
 }
