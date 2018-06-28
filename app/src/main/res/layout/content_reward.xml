@@ -28,12 +28,16 @@
         android:id="@+id/rank"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Rank" />
+        android:text="Rank"
+        android:textColor="#fff"
+        />
 
     <TextView
         android:id="@+id/score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/rank"
-        android:text="Score" />
+        android:text="Score"
+        android:textColor="#fff"
+        />
 </RelativeLayout>
