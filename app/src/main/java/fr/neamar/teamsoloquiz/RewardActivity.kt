@@ -1,7 +1,9 @@
 package fr.neamar.teamsoloquiz
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.widget.Button
 import android.widget.TextView
 
 class RewardActivity : AppCompatActivity() {
@@ -17,8 +19,13 @@ class RewardActivity : AppCompatActivity() {
             rank = intent.getStringExtra("rank");
         }
 
-        findViewById<TextView>(R.id.score).text = score;
-        findViewById<TextView>(R.id.rank).text = rank;
+        findViewById<TextView>(R.id.rank).text = "You placed #" + rank + " in this challenge and earned 1350 Riot Points.";
+
+        findViewById<Button>(R.id.leaderboard).setOnClickListener { _ ->
+            var i = Intent(this, LeaderboardActivity::class.java);
+            startActivity(i);
+        }
+
     }
 
 }
