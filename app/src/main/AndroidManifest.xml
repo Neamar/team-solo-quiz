@@ -21,7 +21,9 @@
         <activity
             android:name=".LeaderboardActivity"
             android:label="Leaderboard"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
     </application>
 
 </manifest>

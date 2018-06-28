@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 // Request a string response from the provided URL.
             val stringRequest = StringRequest(Request.Method.POST, url,
                     Response.Listener<String> { response ->
-                        val i =  Intent(this, LeaderboardActivity::class.java)
+                        val i = Intent(this, LeaderboardActivity::class.java)
                         startActivity(i)
                     },
                     Response.ErrorListener { Toast.makeText(this, "Unable to register :(", Toast.LENGTH_LONG).show() })
