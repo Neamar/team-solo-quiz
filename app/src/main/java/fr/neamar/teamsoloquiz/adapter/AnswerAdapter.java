@@ -84,7 +84,7 @@ public class AnswerAdapter extends RecyclerView.Adapter<AnswerHolder> {
         try {
             JSONObject payload = new JSONObject();
             payload.put("answer", selectedItem);
-            payload.put("id", FirebaseInstanceId.getInstance().getToken());
+            payload.put("playerId", FirebaseInstanceId.getInstance().getToken());
             JsonObjectRequest jsonRequest = new JsonObjectRequest(Request.Method.POST, context.getString(R.string.API_URL) + "/questions/" + questionId,
                     payload,
                     new Response.Listener<JSONObject>() {

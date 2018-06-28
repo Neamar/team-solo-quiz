@@ -57,7 +57,7 @@ class QuestionActivity : AppCompatActivity() {
                 remainingTime -= 100
 
                 if (remainingTime <= 0) {
-                    // moveToAnswers();
+                    moveToAnswers();
                     t.cancel();
                 }
             }

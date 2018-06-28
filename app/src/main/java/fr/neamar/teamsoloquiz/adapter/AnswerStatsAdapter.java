@@ -8,18 +8,15 @@ import android.view.ViewGroup;
 
 import org.json.JSONException;
 
-import java.util.ArrayList;
-
 import fr.neamar.teamsoloquiz.R;
 
 public class AnswerStatsAdapter extends RecyclerView.Adapter<AnswerStatsHolder> {
     private static final String TAG = "SimpleAnswerAdapter";
-    private ArrayList<AnswerStats> answers;
+    private QuestionStats questionStats;
 
-
-    public AnswerStatsAdapter(ArrayList<AnswerStats> answers) throws JSONException {
-        this.answers = answers;
-        updateAnswers(answers);
+    public AnswerStatsAdapter(QuestionStats questionStats) throws JSONException {
+        this.questionStats = questionStats;
+        updateAnswers(questionStats);
     }
 
     @NonNull
@@ -29,26 +26,26 @@ public class AnswerStatsAdapter extends RecyclerView.Adapter<AnswerStatsHolder> 
 
         View view = inflater.inflate(R.layout.item_answer_stats, parent, false);
 
-        return new AnswerStatsHolder(view);
+        return new AnswerStatsHolder(view, questionStats.numberOfResults);
     }
 
     @Override
     public void onBindViewHolder(AnswerStatsHolder holder, int position) {
-        holder.bindAnswerStats(answers.get(position));
+        holder.bindAnswerStats(questionStats.answers.get(position));
     }
 
     @Override
     public long getItemId(int position) {
-        return answers.get(position).hashCode();
+        return questionStats.answers.get(position).hashCode();
     }
 
     @Override
     public int getItemCount() {
-        return answers.size();
+        return questionStats.answers.size();
     }
 
-    private void updateAnswers(ArrayList<AnswerStats> answers) {
-        this.answers = answers;
+    private void updateAnswers(QuestionStats questionStats) {
+        this.questionStats = questionStats;
         notifyDataSetChanged();
     }
 }

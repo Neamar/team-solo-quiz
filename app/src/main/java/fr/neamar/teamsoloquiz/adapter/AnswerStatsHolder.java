@@ -11,17 +11,17 @@ public class AnswerStatsHolder extends RecyclerView.ViewHolder {
     private final TextView answerButton;
     private final ProgressBar percentageProgress;
 
-    public AnswerStatsHolder(View v) {
+    public AnswerStatsHolder(View v, int count) {
         super(v);
 
         answerButton = v.findViewById(R.id.answer);
         percentageProgress = v.findViewById(R.id.percentage);
-        percentageProgress.setMax(100);
+        percentageProgress.setMax(count);
     }
 
     public void bindAnswerStats(AnswerStats answerStats) {
         answerButton.setText(answerStats.answer);
-        percentageProgress.setProgress(answerStats.percentage);
+        percentageProgress.setProgress(answerStats.count);
     }
 
 }

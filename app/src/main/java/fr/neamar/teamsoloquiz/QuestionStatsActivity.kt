@@ -28,7 +28,7 @@ class QuestionStatsActivity : AppCompatActivity() {
 
         findViewById<TextView>(R.id.question).text = question.question;
 
-        findViewById<RecyclerView>(R.id.answers).adapter = AnswerStatsAdapter(question.answerStats)
+        findViewById<RecyclerView>(R.id.answers).adapter = AnswerStatsAdapter(question)
 
 
         findViewById<Button>(R.id.leaderboard).setOnClickListener { _ ->
