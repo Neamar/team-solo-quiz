@@ -40,6 +40,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-messaging:17.0.0'
     implementation 'com.android.volley:volley:1.1.0'
     implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.wang.avi:library:1.0.3'
+    implementation 'com.nineoldandroids:library:2.4.0'
 }
 
 apply plugin: 'com.google.gms.google-services'
