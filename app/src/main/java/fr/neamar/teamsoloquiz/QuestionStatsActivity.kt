@@ -9,7 +9,6 @@ import android.widget.Button
 import android.widget.TextView
 import fr.neamar.teamsoloquiz.adapter.AnswerStatsAdapter
 import fr.neamar.teamsoloquiz.adapter.QuestionStats
-import kotlinx.android.synthetic.main.activity_question_stats.*
 
 class QuestionStatsActivity : AppCompatActivity() {
     val TAG = "QuestionStatsActivity"
@@ -19,7 +18,6 @@ class QuestionStatsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_question_stats)
-        setSupportActionBar(toolbar)
 
         if (intent == null || !intent.hasExtra("question")) {
             Log.e(TAG, "No question provided");

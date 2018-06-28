@@ -14,7 +14,6 @@ import com.android.volley.toolbox.Volley
 import fr.neamar.teamsoloquiz.adapter.AnswerAdapter
 import fr.neamar.teamsoloquiz.adapter.QuestionStats
 import fr.neamar.teamsoloquiz.adapter.UnansweredQuestion
-import kotlinx.android.synthetic.main.activity_unanswered_question.*
 import org.json.JSONException
 import java.io.UnsupportedEncodingException
 import java.util.*
@@ -26,7 +25,6 @@ class QuestionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_unanswered_question)
-        setSupportActionBar(toolbar)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
