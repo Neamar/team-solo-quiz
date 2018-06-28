@@ -10,7 +10,7 @@ import org.json.JSONException;
 
 import java.util.Map;
 
-import fr.neamar.teamsoloquiz.adapter.Question;
+import fr.neamar.teamsoloquiz.adapter.UnansweredQuestion;
 
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
     private static final String TAG = "MyFirebaseMsgService";
@@ -35,7 +35,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
     private void onNewQuestion(RemoteMessage remoteMessage) throws JSONException {
         Log.i(TAG, "Received a new question");
-        Question question = new Question(remoteMessage.getData());
+        UnansweredQuestion question = new UnansweredQuestion(remoteMessage.getData());
 
         Intent questionIntent = new Intent(this, QuestionActivity.class);
         questionIntent.putExtra("question", question);

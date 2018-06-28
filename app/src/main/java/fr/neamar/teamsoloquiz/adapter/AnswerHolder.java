@@ -7,11 +7,11 @@ import android.widget.TextView;
 
 import fr.neamar.teamsoloquiz.R;
 
-class SimpleAnswerHolder extends RecyclerView.ViewHolder {
+class AnswerHolder extends RecyclerView.ViewHolder {
     private final TextView answerButton;
     private int position;
 
-    public SimpleAnswerHolder(View v, final SimpleAnswerAdapter adapter) {
+    public AnswerHolder(View v, final AnswerAdapter adapter) {
         super(v);
 
         answerButton = v.findViewById(R.id.answer);
