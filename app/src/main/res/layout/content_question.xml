@@ -17,6 +17,14 @@
         android:textSize="25dp"
         android:text="blah blah who gets first blood yay please answer fast" />
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_below="@id/question"
+        android:min="0"
+        android:max="100"
+        android:layout_height="wrap_content" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/answers"
@@ -24,7 +32,7 @@
         android:layout_height="460dp"
         android:scrollbars="vertical"
         app:layoutManager="android.support.v7.widget.LinearLayoutManager"
-        android:layout_below="@id/question"
+        android:layout_below="@id/progressBar"
         tools:itemCount="4"
         tools:listitem="@layout/item_answer_simple" />
 </RelativeLayout>
