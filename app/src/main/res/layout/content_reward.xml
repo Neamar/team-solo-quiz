@@ -6,7 +6,23 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".RewardActivity"
-    tools:showIn="@layout/activity_reward">
+    tools:showIn="@layout/activity_reward"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_reward"
+        android:scaleType="center"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/reward_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        />
 
     <TextView
         android:id="@+id/rank"
