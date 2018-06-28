@@ -3,4 +3,5 @@
     <string name="title_activity_leaderboard">LeaderboardActivity</string>
     <string name="title_activity_question">QuestionActivity</string>
     <string name="title_activity_answered_question">AnsweredQuestionActivity</string>
+    <string name="title_activity_reward">RewardActivity</string>
 </resources>
