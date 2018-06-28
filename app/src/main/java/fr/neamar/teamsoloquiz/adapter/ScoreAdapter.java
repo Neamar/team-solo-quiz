@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import fr.neamar.teamsoloquiz.R;
 
 public class ScoreAdapter extends RecyclerView.Adapter<ScoreHolder> {
-    public ArrayList<Score> scores;
+    private ArrayList<Score> scores;
 
     public ScoreAdapter(JSONArray jsonScores) throws JSONException {
         scores = new ArrayList<>(jsonScores.length());

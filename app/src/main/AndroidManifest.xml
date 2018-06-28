@@ -21,8 +21,28 @@
         <activity
             android:name=".LeaderboardActivity"
             android:label="Leaderboard"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"></activity>
 
+        <service android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".RegistrationIntentService" />
+
+        <activity
+            android:name=".QuestionActivity"
+            android:label="@string/title_activity_question"
+            android:parentActivityName=".LeaderboardActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.neamar.teamsoloquiz.LeaderboardActivity" />
         </activity>
     </application>
 

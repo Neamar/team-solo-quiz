@@ -14,12 +14,15 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
-        resValue "string", "API_URL", "http://team-solo-quiz-mock.herokuapp.com"
+        // resValue "string", "API_URL", "https://team-solo-quiz.herokuapp.com/app"
+        resValue "string", "API_URL", "https://team-solo-quiz-mock.herokuapp.com"
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            resValue "string", "API_URL", "https://team-solo-quiz.herokuapp.com/app"
+
         }
     }
 }
@@ -34,6 +37,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'com.google.firebase:firebase-core:16.0.1'
+    implementation 'com.google.firebase:firebase-messaging:17.0.0'
     implementation 'com.android.volley:volley:1.1.0'
     implementation 'com.android.support:recyclerview-v7:27.1.1'
 }

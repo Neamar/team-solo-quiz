@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Team Solo Quiz</string>
     <string name="title_activity_leaderboard">LeaderboardActivity</string>
+    <string name="title_activity_question">QuestionActivity</string>
 </resources>
