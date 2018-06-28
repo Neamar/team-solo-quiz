@@ -22,7 +22,7 @@ class RewardActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.rank).text = "You placed #" + rank + " in this challenge and earned 1350 Riot Points.";
 
         findViewById<Button>(R.id.leaderboard).setOnClickListener { _ ->
-            var i = Intent(this, LeaderboardActivity::class.java);
+            val i = Intent(this, LeaderboardActivity::class.java);
             startActivity(i);
         }
 

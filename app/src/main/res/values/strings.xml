@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Team Solo Quiz</string>
+    <string name="app_name">LCS Quiz companion</string>
     <string name="title_activity_leaderboard">LeaderboardActivity</string>
     <string name="title_activity_question">QuestionActivity</string>
     <string name="title_activity_answered_question">AnsweredQuestionActivity</string>

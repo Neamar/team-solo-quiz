@@ -7,12 +7,19 @@
     <TextView
         android:id="@+id/answer"
         android:layout_width="match_parent"
+        android:textStyle="bold"
+        android:textColor="@color/colorTitle"
+        android:textSize="16dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/question"
         tools:text="This was my answer" />
 
     <ProgressBar
         android:id="@+id/percentage"
+        android:scaleY="5"
+        android:theme="@style/LinearProgress"
+        android:paddingBottom="10dp"
+        android:paddingTop="8dp"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
