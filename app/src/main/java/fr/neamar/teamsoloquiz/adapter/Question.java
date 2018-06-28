@@ -1,7 +1,5 @@
 package fr.neamar.teamsoloquiz.adapter;
 
-import android.util.Log;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 
@@ -20,8 +18,6 @@ public class Question implements Serializable {
         question = data.get("question");
         timeout = Integer.parseInt(data.get("timeout"));
         id = Integer.parseInt(data.get("question_id"));
-
-        Log.e("WTF", data.toString());
 
         JSONArray jsonAnswers = new JSONArray(data.get("answers"));
         for(int i = 0; i < jsonAnswers.length(); i++) {

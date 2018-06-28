@@ -2,10 +2,11 @@ package fr.neamar.teamsoloquiz
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.RecyclerView
 import android.util.Log
-import android.widget.Button
 import android.widget.TextView
 import fr.neamar.teamsoloquiz.adapter.Question
+import fr.neamar.teamsoloquiz.adapter.SimpleAnswerAdapter
 import kotlinx.android.synthetic.main.activity_question.*
 
 class QuestionActivity : AppCompatActivity() {
@@ -28,8 +29,6 @@ class QuestionActivity : AppCompatActivity() {
 
         findViewById<TextView>(R.id.question).text = question.question;
 
-        findViewById<Button>(R.id.answer1).text = question.answers[0];
-        findViewById<Button>(R.id.answer2).text = question.answers[1];
-
+        findViewById<RecyclerView>(R.id.answers).adapter = SimpleAnswerAdapter(question.answers)
     }
 }

@@ -13,7 +13,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:text="Waiting for first question..." />
@@ -25,5 +25,5 @@
         android:scrollbars="vertical"
         app:layoutManager="android.support.v7.widget.LinearLayoutManager"
         android:layout_below="@id/textView"
-        tools:listitems="@layout/item_leaderboard" />
+        tools:listitem="@layout/item_score" />
 </RelativeLayout>
