@@ -28,10 +28,12 @@ class AnswerHolder extends RecyclerView.ViewHolder {
         answerButton.setText(answer);
 
         if(position == selectedPosition) {
-            answerButton.setBackgroundColor(Color.RED);
+            answerButton.setBackgroundColor(Color.parseColor("#D1363A"));
+            answerButton.setTextColor(Color.parseColor("#FFFFFF"));
         }
         else {
-            answerButton.setBackgroundColor(Color.GRAY);
+            answerButton.setBackgroundColor(Color.parseColor("#EFF2F6"));
+            answerButton.setTextColor(Color.parseColor("#1F2021"));
         }
 
         this.position = position;

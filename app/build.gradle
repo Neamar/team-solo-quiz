@@ -10,8 +10,8 @@ android {
         applicationId "fr.neamar.teamsoloquiz"
         minSdkVersion 18
         targetSdkVersion 27
-        versionCode 2
-        versionName "1.1"
+        versionCode 3
+        versionName "1.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         // resValue "string", "API_URL", "https://team-solo-quiz.herokuapp.com/app"
