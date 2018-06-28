@@ -3,7 +3,8 @@
     <color name="colorPrimary">#D1363A</color>
     <color name="colorPrimaryDark">#A71E34</color>
     <color name="colorAccent">#FF4081</color>
-
+    <color name="colorLeaderboardMe">#0696AA</color>
+    <color name="colorLeaderboardOthers">#1F2021</color>
     <color name="colorButtonBackground">#D1363A</color>
     <color name="colorButtonPressed">#B32428</color>
     <color name="colorTitle">#1F2021</color>
