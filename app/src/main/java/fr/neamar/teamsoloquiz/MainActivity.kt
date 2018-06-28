@@ -25,10 +25,10 @@ class MainActivity : AppCompatActivity() {
             register(userName);
         }
 
-        /*if(sharedPreferences.contains("username")) {
+        if(sharedPreferences.contains("username")) {
            register(sharedPreferences.getString("username", ""));
            finish();
-        }*/
+        }
     }
 
     private fun register(username: String) {
