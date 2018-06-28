@@ -52,6 +52,7 @@
             android:inputType="text"
             android:hint="e.g. MasterTeemo"
             android:background="#fff"
+            android:layout_marginTop="2dp"
             />
 
         <Button
@@ -63,6 +64,7 @@
             android:textColor="#fff"
             android:textAllCaps="true"
             android:textStyle="bold"
+            android:layout_marginTop="10dp"
             />
 
     </LinearLayout>
