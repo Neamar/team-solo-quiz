@@ -25,9 +25,9 @@
         <activity
             android:name=".LeaderboardActivity"
             android:label="Leaderboard"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
 
-        <service android:name=".MyFirebaseMessagingService">
+        <service android:name=".NotificationService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
@@ -48,6 +48,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.neamar.teamsoloquiz.LeaderboardActivity" />
         </activity>
+        <activity
+            android:name=".QuestionStatsActivity"
+            android:label="@string/title_activity_answered_question"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RewardActivity"
+            android:label="@string/title_activity_reward"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

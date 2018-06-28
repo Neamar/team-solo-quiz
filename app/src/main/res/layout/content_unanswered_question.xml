@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".QuestionActivity"
+    tools:showIn="@layout/activity_unanswered_question">
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:textSize="30dp"
+        android:text="Which team will strike first blood?"
+
+        android:background="#A71E34"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:paddingHorizontal="60dp"
+        />
+
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_below="@id/question"
+        android:min="0"
+        android:max="100"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/answers"
+        android:layout_width="match_parent"
+        android:layout_height="460dp"
+        android:scrollbars="vertical"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        android:layout_below="@id/progressBar"
+        tools:itemCount="4"
+        tools:listitem="@layout/item_answer_simple" />
+</RelativeLayout>

@@ -16,6 +16,6 @@ class Score {
 
     @Override
     public int hashCode() {
-        return rank + score + name.hashCode();
+        return name.hashCode();
     }
 }

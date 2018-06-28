@@ -4,10 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LeaderboardActivity"
-    android:background="#EFF2F6"
-    >
+    tools:context=".QuestionStatsActivity">
 
-    <include layout="@layout/content_leaderboard" />
+    <include layout="@layout/content_question_stats" />
 
 </android.support.design.widget.CoordinatorLayout>

@@ -12,27 +12,29 @@ import java.util.ArrayList;
 
 import fr.neamar.teamsoloquiz.R;
 
-public class SimpleAnswerAdapter extends RecyclerView.Adapter<SimpleAnswerHolder> {
-    private ArrayList<String> answers;
+public class AnswerStatsAdapter extends RecyclerView.Adapter<AnswerStatsHolder> {
+    private static final String TAG = "SimpleAnswerAdapter";
+    private ArrayList<AnswerStats> answers;
 
-    public SimpleAnswerAdapter(ArrayList<String> answers) throws JSONException {
+
+    public AnswerStatsAdapter(ArrayList<AnswerStats> answers) throws JSONException {
         this.answers = answers;
         updateAnswers(answers);
     }
 
     @NonNull
     @Override
-    public SimpleAnswerHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public AnswerStatsHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
 
-        View view = inflater.inflate(R.layout.item_answer_simple, parent, false);
+        View view = inflater.inflate(R.layout.item_answer_stats, parent, false);
 
-        return new SimpleAnswerHolder(view);
+        return new AnswerStatsHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(SimpleAnswerHolder holder, int position) {
-        holder.bindSimpleAnswer(answers.get(position));
+    public void onBindViewHolder(AnswerStatsHolder holder, int position) {
+        holder.bindAnswerStats(answers.get(position));
     }
 
     @Override
@@ -45,7 +47,7 @@ public class SimpleAnswerAdapter extends RecyclerView.Adapter<SimpleAnswerHolder
         return answers.size();
     }
 
-    private void updateAnswers(ArrayList<String> answers) {
+    private void updateAnswers(ArrayList<AnswerStats> answers) {
         this.answers = answers;
         notifyDataSetChanged();
     }
