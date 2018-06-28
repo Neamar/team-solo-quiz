@@ -1,5 +1,6 @@
 package fr.neamar.teamsoloquiz
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.RecyclerView
@@ -11,6 +12,7 @@ import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import fr.neamar.teamsoloquiz.adapter.AnswerAdapter
+import fr.neamar.teamsoloquiz.adapter.QuestionStats
 import fr.neamar.teamsoloquiz.adapter.UnansweredQuestion
 import kotlinx.android.synthetic.main.activity_unanswered_question.*
 import org.json.JSONException
@@ -81,6 +83,11 @@ class QuestionActivity : AppCompatActivity() {
                     Response.Listener {
                         Log.i(TAG, "Retrieved stats for question ${question.id}")
 
+                        val questionStats = QuestionStats(it);
+
+                        val i = Intent(this, QuestionStatsActivity::class.java);
+                        i.putExtra("question", questionStats);
+                        startActivity(i);
 
                         queue.stop()
 

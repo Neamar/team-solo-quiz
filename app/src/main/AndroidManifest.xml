@@ -45,7 +45,7 @@
                 android:value="fr.neamar.teamsoloquiz.LeaderboardActivity" />
         </activity>
         <activity
-            android:name=".AnsweredQuestionActivity"
+            android:name=".QuestionStatsActivity"
             android:label="@string/title_activity_answered_question"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
