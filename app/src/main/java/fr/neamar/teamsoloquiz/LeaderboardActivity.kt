@@ -19,6 +19,7 @@ import org.json.JSONArray
 
 class LeaderboardActivity : AppCompatActivity() {
     val TAG = "LeaderboardActivity";
+    lateinit var adapter: ScoreAdapter
 
     private inner class DataUpdateReceiver : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
@@ -35,6 +36,9 @@ class LeaderboardActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_leaderboard)
+
+        adapter = ScoreAdapter(JSONArray())
+        leaderboard.adapter = adapter
 
         loadLeaderboard();
     }
@@ -58,7 +62,7 @@ class LeaderboardActivity : AppCompatActivity() {
 // Request a string response from the provided URL.
         val stringRequest = JsonArrayRequest(Request.Method.GET, url, null,
                 Response.Listener<JSONArray> { response ->
-                    leaderboard.adapter = ScoreAdapter(response)
+                    adapter.updateScores(response);
                 },
                 Response.ErrorListener { Toast.makeText(this, "Unable to load leaderboard :(", Toast.LENGTH_LONG).show() })
 

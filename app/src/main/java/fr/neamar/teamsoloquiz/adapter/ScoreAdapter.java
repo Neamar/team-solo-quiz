@@ -17,13 +17,7 @@ public class ScoreAdapter extends RecyclerView.Adapter<ScoreHolder> {
     private ArrayList<Score> scores;
 
     public ScoreAdapter(JSONArray jsonScores) throws JSONException {
-        scores = new ArrayList<>(jsonScores.length());
-        for(int i = 0; i < jsonScores.length(); i++) {
-            Score score = new Score(jsonScores.getJSONObject(i));
-            scores.add(score);
-        }
-
-        updateScores(scores);
+        updateScores(jsonScores);
         setHasStableIds(true);
     }
 
@@ -52,8 +46,17 @@ public class ScoreAdapter extends RecyclerView.Adapter<ScoreHolder> {
         return scores.size();
     }
 
-    private void updateScores(ArrayList<Score> scores) {
-        this.scores = scores;
+    public void updateScores(JSONArray jsonScores) {
+        scores = new ArrayList<>(jsonScores.length());
+        for(int i = 0; i < jsonScores.length(); i++) {
+            try {
+                Score score = new Score(jsonScores.getJSONObject(i));
+                scores.add(score);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+
         notifyDataSetChanged();
     }
 }
