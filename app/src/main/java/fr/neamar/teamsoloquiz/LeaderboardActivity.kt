@@ -7,6 +7,7 @@ import android.content.IntentFilter
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
+import android.view.WindowManager
 import android.widget.Toast
 import com.android.volley.Request
 import com.android.volley.Response
@@ -34,6 +35,7 @@ class LeaderboardActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_leaderboard)
 

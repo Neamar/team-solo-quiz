@@ -29,6 +29,8 @@ class MainActivity : AppCompatActivity() {
            register(sharedPreferences.getString("username", ""));
            finish();
         }
+
+        getWindow().setBackgroundDrawable(resources.getDrawable(R.drawable.login_bg))
     }
 
     private fun register(username: String) {

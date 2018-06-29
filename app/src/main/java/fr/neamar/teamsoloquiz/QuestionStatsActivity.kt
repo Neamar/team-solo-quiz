@@ -5,10 +5,12 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.RecyclerView
 import android.util.Log
+import android.view.WindowManager
 import android.widget.Button
 import android.widget.TextView
 import fr.neamar.teamsoloquiz.adapter.AnswerStatsAdapter
 import fr.neamar.teamsoloquiz.adapter.QuestionStats
+import java.util.*
 
 class QuestionStatsActivity : AppCompatActivity() {
     val TAG = "QuestionStatsActivity"
@@ -17,6 +19,8 @@ class QuestionStatsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
         setContentView(R.layout.activity_question_stats)
 
         if (intent == null || !intent.hasExtra("question")) {
@@ -36,6 +40,17 @@ class QuestionStatsActivity : AppCompatActivity() {
             startActivity(i);
             finish();
         }
+
+        //Declare the timer
+        val t = Timer()
+        //Set the schedule function and rate
+        t.schedule(object : TimerTask() {
+
+            override fun run() {
+                finish()
+            }
+
+        }, 3000)
     }
 
 }

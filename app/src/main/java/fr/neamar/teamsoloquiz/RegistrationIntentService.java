@@ -50,7 +50,7 @@ public class RegistrationIntentService extends IntentService {
             // sent to your server. If the boolean is false, send the token to your server,
             // otherwise your server should have already received the token.
 
-            if(sharedPreferences.contains("username")) {
+            if(sharedPreferences.contains("username") && !sharedPreferences.getString("username", "").equals("")) {
                 String username = sharedPreferences.getString("username", "");
 
                 sendTokenToServer(token, username);

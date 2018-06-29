@@ -47,6 +47,7 @@ public class NotificationService extends FirebaseMessagingService {
 
         Intent questionIntent = new Intent(this, QuestionActivity.class);
         questionIntent.putExtra("question", question);
+        questionIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(questionIntent);
     }
 
@@ -61,6 +62,7 @@ public class NotificationService extends FirebaseMessagingService {
         Intent gameEnded = new Intent(this, RewardActivity.class);
         gameEnded.putExtra("score", d.get("score"));
         gameEnded.putExtra("rank", d.get("rank"));
+        gameEnded.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
         startActivity(gameEnded);
     }
